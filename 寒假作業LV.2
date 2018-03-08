@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main (){
+	int day,date = 1;
+	cout << "歡迎使用月曆" <<endl;
+	cout << "請輸入欲查詢月份一號為星期幾?";
+	cin >> day;
+	int remainder=day%7;
+	cout << "一  二  三  四  五  六  日" <<endl;
+	for (int i = day-1;i > 0;i--){
+		cout << "    ";
+	}
+	while (true){
+		day++;
+		if (day%7==remainder){
+			cout << "\n";
+		}
+		if (date<10){
+		cout << "0" << date << "  ";
+		}
+		else {
+		cout << date << "  ";
+		}
+		date++;
+		if (date==32){
+			break;
+		}
+	}
+	
+}
